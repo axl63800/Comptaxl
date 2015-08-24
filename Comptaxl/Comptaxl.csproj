@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACA40B6A-80C4-4345-AB28-F08AF8A6D7DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comptaxl</RootNamespace>
+    <AssemblyName>Comptaxl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comptaxl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptaxl.Designer.cs">
+      <DependentUpon>Comptaxl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlClientDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlClientDetail.Designer.cs">
+      <DependentUpon>CtrlClientDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Clients.Designer.cs">
+      <DependentUpon>F_Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Rdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Rdv.Designer.cs">
+      <DependentUpon>F_Rdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_TypeRdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_TypeRdv.Designer.cs">
+      <DependentUpon>F_TypeRdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_UserConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_UserConfig.Designer.cs">
+      <DependentUpon>F_UserConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Comptaxl.resx">
+      <DependentUpon>Comptaxl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlClientDetail.resx">
+      <DependentUpon>CtrlClientDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Clients.resx">
+      <DependentUpon>F_Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Rdv.resx">
+      <DependentUpon>F_Rdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_TypeRdv.resx">
+      <DependentUpon>F_TypeRdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_UserConfig.resx">
+      <DependentUpon>F_UserConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\ComptaxlData.C_Client.datasource" />
+    <None Include="Properties\DataSources\ComptaxlData.C_Phone.datasource" />
+    <None Include="Properties\DataSources\ComptaxlData.C_PhoneType.datasource" />
+    <None Include="Properties\DataSources\ComptaxlData.C_Rdv.datasource" />
+    <None Include="Properties\DataSources\ComptaxlData.C_TypeRdv.datasource" />
+    <None Include="Properties\DataSources\ComptaxlData.C_User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComptaxlData\ComptaxlData.csproj">
+      <Project>{d64bbfb7-1d9d-4da6-8afa-173df874bd0a}</Project>
+      <Name>ComptaxlData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
